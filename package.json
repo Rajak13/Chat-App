@@ -1,0 +1,22 @@
+{
+  "name": "chat-app-monorepo",
+  "version": "1.0.0",
+  "description": "Chat application with web and electron clients",
+  "private": true,
+  "scripts": {
+    "dev:web": "cd apps/web-client && npm run dev",
+    "dev:electron": "cd apps/electron-client && npm run dev",
+    "dev:both": "concurrently \"npm run dev:web\" \"sleep 3 && npm run dev:electron\"",
+    "build:web": "cd apps/web-client && npm run build",
+    "build:electron": "cd apps/electron-client && npm run electron:pack",
+    "install:all": "cd apps/web-client && npm install && cd ../electron-client && npm install"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

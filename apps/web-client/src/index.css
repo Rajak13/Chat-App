@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌍 Your global custom styles */
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 text-lg font-medium border-2 border-[#DC143C] 
+           text-[#DC143C] rounded-md transition 
+           hover:bg-[#DC143C] hover:text-[#fcf5eb];
+  }
+
+  .heading {
+    @apply text-5xl font-bold mb-6 text-[#DC143C] md:text-4xl;
+  }
+
+  .subtitle {
+    @apply text-lg mb-3 text-[#DC143C] font-medium;
+  }
+
+  .tagline {
+    @apply text-lg italic mb-8 text-[#DC143C];
+  }
+}
